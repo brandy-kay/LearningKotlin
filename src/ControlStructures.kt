@@ -15,7 +15,9 @@ fun main() {
 
 
  // nested if else
+
  /*if (age<18){
+     val z = if(age>18) 22 else 16 //giving value to z according to conditions
      println("Not able to vote")
  }
  else if (age>60)
@@ -39,4 +41,12 @@ fun main() {
          println("Young member")
      }
  }*/
+   //palindrome
+   val string = "Brandy"  //"racecar"
+   if(string==string.reversed()){
+       println("The string is a palindrome")
+   }
+    else{
+        println("Augh!! not a palindrome")
+   }
 }
