@@ -12,6 +12,17 @@ fun main() {
             println("an elder member")
         }
     }
+    println("Enter a number?")
+    val num = readLine()?.toInt()
+    var i = num
+    if (i != null) {
+        println("lets count now")
+        while (i >= 0){
+            println(i)
+
+            i--
+        }
+    }
 
 
  // nested if else

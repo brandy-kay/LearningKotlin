@@ -1,6 +1,3 @@
-import sun.audio.AudioPlayer
-import sun.audio.AudioPlayer.player
-
 fun main(args: Array<String>) {
     val evenNumber = arrayOf(2, 4, 5, 66)//creating an array which is of type Array<Int>
     println(evenNumber[3])
@@ -19,6 +16,14 @@ fun main(args: Array<String>) {
     //creating list elements which cannot be altered with
     val innerPlanets = listOf("Mercury","Venus","Earth","Mars") //is immutable and cannnot be altered
     val outerPlanets = arrayListOf("Jupiter","Saturn","Uranus","Neptune") //creating list of type array
+
+    //printing elements of array
+    val innerPlanetsLength=innerPlanets.size //declare the length size of the array
+    var i=0
+    while (i<innerPlanetsLength){
+        println(innerPlanets[i])
+        i++
+    }
 
     //creating list that can be altered with
     var number = mutableListOf(1,2,3,4,5,6,) //list of numbers
@@ -81,5 +86,21 @@ fun main(args: Array<String>) {
     for (playee in player) {
         println(playee)
     }
+    //sumOfInteger()
+    //creating a nullable list
+    var nullableList : List<Int>?= listOf(1,2,3,4)
+    //creating list with null element
+    var listOfNullables : List<Int?> = listOf(1,2,3,null,4)
+    //creating list with both null elements and a null list
+    var nullableListOfNullables : List<Int?>? = listOf(1,2,3,4,5,6)
+
+
+}
+fun sumOfInteger(list: List<Int>) : Int{
+    var sum = 0
+    for(number in list){
+        sum +=number
+    }
+    return sum
 }
 
