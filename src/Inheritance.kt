@@ -34,9 +34,9 @@ class Human(birthDate: String): Mammal(birthDate) {
     }
 }
 //sealed classes are used to make a particular type remain to a class
-sealed class Shape {
-    class Circle(val radius: Int): Shape()
-    class Square(val sideLength: Int): Shape()
+sealed class Shape(s: String, a: Double, b: Double, height: Double) {
+   // class Circle(val radius: Int): Shape("paralelogaram", a, b, height)
+   // class Square(val sideLength: Int): Shape("paralelogaram", a, b, height)
 }
 
 fun main() {
