@@ -1,12 +1,16 @@
 fun main() {
-    var age = 70
+    var age = readLine()?.toInt()
+    val x =5
 
     when (age) {
-        in 1..17 -> println("Not able to vote")
-        in 18..60 -> {
-            println("able to vote")
+        in 1..5 -> println("You are so young")
+        in 6..17 -> if (x==6){           //making condition with when
+            println("you are a teenager")
             println("Not an elder member")
         }
+        18 -> println("you are now 18")
+        19,20 -> println("you are a young adult")
+        in 21..65 -> println("You are an adult")
         else ->{
             println("Able to vote ")
             println("an elder member")

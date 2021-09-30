@@ -26,8 +26,9 @@ fun main(args: Array<String>) {
     }
 
     //creating list that can be altered with
+    val list = mutableListOf<Int>() //creating an empty list
     var number = mutableListOf(1,2,3,4,5,6,) //list of numbers
-    val player = mutableListOf("Brandy","Sophy","Daphy","Vivian") //using mutableListof makes it altered with
+    val player = mutableListOf<String>("Brandy","Sophy","Daphy","Vivian") //using mutableListof makes it altered with
     println(player.isEmpty()) //checks if the list is empty
 
     //to set players
@@ -93,6 +94,20 @@ fun main(args: Array<String>) {
     var listOfNullables : List<Int?> = listOf(1,2,3,null,4)
     //creating list with both null elements and a null list
     var nullableListOfNullables : List<Int?>? = listOf(1,2,3,4,5,6)
+
+    //priactises
+    val mutablelist = mutableListOf<Int>()
+    println("Enter five values")
+    for (i in 1..5){
+        val value = readLine()?.toInt()  //enter value to be added to the list
+        if (value != null){
+           mutablelist.add(value) //adding value to alist
+        }
+    }
+    println("The list values are : ")
+    for (i in mutablelist){
+        println(i)    //printing list value using a for loop
+    }
 
 
 }
