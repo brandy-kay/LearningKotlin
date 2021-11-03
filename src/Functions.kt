@@ -28,6 +28,9 @@ fun main() {
             println("$input is not a prime number")
         }
     }
+    val listNum = listOf(1,2,3,4,5,6,)
+    println("The product of the munber is ${listNum.product()}")
+
 }
 
 //defining a function with return type
@@ -57,7 +60,7 @@ fun sumValue (num: Int){
 }
 // searches for index of value entered if present in a list
 fun indexOf(list:List<Int>,value:Int):Int{
-    for (i in 0..list.size-1){
+    for (i in list.indices){
         if (list[i]==value){
             return i
         }
@@ -65,6 +68,8 @@ fun indexOf(list:List<Int>,value:Int):Int{
     return -1
 }
 //Extension functions
+
+// extension function to return a prime number value
 fun Int.isPrimeNumber():Boolean{
     for(i in 2 until this-1){
         if (this%i==0){
@@ -73,4 +78,12 @@ fun Int.isPrimeNumber():Boolean{
     }
     return true
 
+}
+//extension function to calculate number of each value in a list
+fun List<Int>.product():Int{
+    var product=1
+    for (i in this){
+        product *= i
+    }
+    return product
 }

@@ -4,9 +4,10 @@ fun main() {
     println("The maximum number is $max")
     searchFor("How to be come a best programmer") //searchEngine is initialised can still be omited it takes the default
     searchFor("How to become a google developer","OperaMini")
-
     //Named parameter
     searchFor(search = "How to be come a good ml expert",searchEngine = "Chrome")
+    val sum = alternatingSum(1,2,3,4,5,6,7)
+    println("The sum is $sum")
 }
 //Defaults
 fun searchFor(search:String,searchEngine:String="Google"){
@@ -24,7 +25,17 @@ fun getMax(vararg  numbers:Int):Int{
     return max
 }
 
-/*
 fun alternatingSum(vararg numbers:Int):Int{
-
-}*/
+    var sum=0
+    var toggle=true
+    for(number in numbers){
+        if (toggle){
+            sum+=number
+        }
+        else{
+            sum-=number
+        }
+        toggle=!toggle
+    }
+    return sum
+}
