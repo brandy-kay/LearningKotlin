@@ -1,9 +1,9 @@
 class Rectangle(
     val a: Double,
     val b: Double,
-) {
+):Shapes("Rectange") {
     init {
-        println("Rectangle created with a= $a and b=$b")
+        println("$name created with a= $a and b=$b")
     }
 
     fun area() = a * b
@@ -13,7 +13,9 @@ class Rectangle(
 
 fun main() {
     val myRectangle = Rectangle(2.4, 4.5)
-    println("Rectange area is ${myRectangle.area()}")
+    println("Rectangle area is ${myRectangle.area()}")
     println("Rectangle perimeter is ${myRectangle.perimenter()}")
     println("is it a square ${myRectangle.square()}")
+    myRectangle.changeName("palindrom")
+    println(myRectangle.name)
 }
