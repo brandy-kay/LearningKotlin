@@ -27,6 +27,31 @@ fun main() {
     myRectangle.changeName("palindrom")
     println(myRectangle.name)
 
+    //Creating a paralellogram
+    val pHeight = 3.0
+    val pBase = 4.0
+    val pWidth = 2.0
+
+    val parallelogram = object:Shapes("parallelogram",3.0,4.0,2.0){
+
+        init {
+            println("$name created with a= $pBase b=$pWidth and height = $pHeight")
+            println("The area is ${area()}")
+            println("The perimeter is ${perimeter()}")
+        }
+        override fun area(): Double {
+            return pBase*pHeight
+        }
+
+        override fun perimeter(): Double {
+            return 2*pWidth+2*pBase
+        }
+
+        fun isRectangle():Boolean =pHeight==pBase
+
+    }
+
+println("Is the paralelogram a rectangle ${parallelogram.isRectangle()}")
 
 
 }

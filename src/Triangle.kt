@@ -11,8 +11,8 @@ class Triangle(val length:Double,
 
     }
 
-    fun perimeter() =length+base+height
-    fun area()=sqrt((perimeter()/2)*(perimeter()/2-height)*(perimeter()/2-base)*(perimeter()/2-length))
+    override fun perimeter() =length+base+height
+    override fun area()=sqrt((perimeter()/2)*(perimeter()/2-height)*(perimeter()/2-base)*(perimeter()/2-length))
 }
 
 fun main() {
