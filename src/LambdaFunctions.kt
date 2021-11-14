@@ -1,9 +1,8 @@
 fun main() {
     //declaration of variable that hold lambda functions
-    val mulitplyLambda : (Int,Int)  -> Int
 
     //assigning lambda with function
-    mulitplyLambda={a:Int,b:Int -> Int
+    val mulitplyLambda : (Int,Int)  -> Int = { a:Int, b:Int -> Int
         a*b
     }
     println(mulitplyLambda)
@@ -29,6 +28,12 @@ fun main() {
     })
     println(nameByLength)
 
+    //using lambda functions
+    var lis = (1..20).toList()
+    println(lis)
+    lis = lis.filter { it%2==0 }
+    println(lis)
+
 }
 //lambda as an argument
 fun operationNumbers(
@@ -52,5 +57,7 @@ fun countingLambda() : () -> Int{
         counter
     }
     return numberCounter
+
 }
+
 

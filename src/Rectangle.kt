@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 class Rectangle(
     val a: Double,
     val b: Double,
@@ -5,6 +7,13 @@ class Rectangle(
     //many implementation of constuctor (constructor overloading)
     constructor(a:Double):this(a,a)
     constructor(a:Int,b:Int):this(a.toDouble(),b.toDouble())  //creating constructor of different type and casting it to double
+    companion object{
+        fun randomRectangle():Rectangle{
+            val length = Random.nextDouble(2.0)
+            val wid = Random.nextDouble(4.5)
+            return Rectangle(length,wid)
+        }
+    }
 
     init {
         println("$name created with a= $a and b=$b")
@@ -27,7 +36,9 @@ fun main() {
     myRectangle.changeName("palindrom")
     println(myRectangle.name)
 
-    //Creating a paralellogram
+    val rect = Rectangle.randomRectangle() //accessing companion object
+
+    //Creating a paralellogram an anonymous class
     val pHeight = 3.0
     val pBase = 4.0
     val pWidth = 2.0

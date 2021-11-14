@@ -8,7 +8,7 @@ fun main() {
 
     println("please enter a number")
     //try executed when the input is of the right format
-    //catch is executedcif the input is of wrong format
+    //catch is executed if the input is of wrong format
     //finally is executed on both conditions
     val input = try {
         readLine()?.toInt()
